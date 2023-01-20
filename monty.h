@@ -12,9 +12,10 @@
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
+ *
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO Holberton project
- **/
+ */
 typedef struct stack_s
 {
 	int n;
@@ -28,7 +29,7 @@ typedef struct stack_s
  * @content: line content
  * @lifi: flag change stack <-> queue
  * Description: carries values through the program
- **/
+ */
 typedef struct bus_s
 {
 	char *arg;
@@ -41,9 +42,10 @@ extern bus_t bus;
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
+ *
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO Holberton project
- **/
+ */
 typedef struct instruction_s
 {
 	char *opcode;
@@ -73,7 +75,4 @@ void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
 void f_queue(stack_t **head, unsigned int counter);
 void f_stack(stack_t **head, unsigned int counter);
-void add_node(stack_t **stack, int value);
-void divide_top_two(stack_t **stack, unsigned int line_num);
-int execute_opcode(char *line_content, stack_t **stack_head, unsigned int line_num, FILE *file_ptr);
 #endif
